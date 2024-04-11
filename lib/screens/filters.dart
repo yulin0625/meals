@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 enum Filter {
-  flutenFree,
+  glutenFree,
   lactoseFree,
   vegetarian,
   vegan,
@@ -48,7 +48,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
         onPopInvoked: (bool didPop) {
           if (didPop) return;
           Navigator.of(context).pop({
-            Filter.flutenFree: _glutenFreeFilterSet,
+            Filter.glutenFree: _glutenFreeFilterSet,
             Filter.lactoseFree: _lactoseFreeFilterSet,
             Filter.vegetarian: _vegetarianFilterSet,
             Filter.vegan: _veganFilterSet,
