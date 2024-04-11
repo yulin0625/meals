@@ -47,15 +47,17 @@ class _TabScreenState extends State<TabScreen> {
     });
   }
 
-  void _setScreen(String identifier) {
+  void _setScreen(String identifier) async {
     Navigator.of(context).pop(); // close drawer
     if (identifier == 'filters') {
-      Navigator.of(context).push(
-      // Navigator.of(context).pushReplacement(
+      final result = await Navigator.of(context).push<Map<Filter, bool>>(
+        // Map<Filter, bool> is the trturn type of this push function
+        // Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (ctx) => const FiltersScreen(),
         ),
       );
+      print(result);
     }
   }
 
