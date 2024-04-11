@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meals/screens/meals.dart';
 import 'package:meals/screens/tabs.dart';
 import 'package:meals/widgets/main_drawer.dart';
 
@@ -20,20 +19,20 @@ class _FiltersScreenState extends State<FiltersScreen> {
       appBar: AppBar(
         title: const Text('Your Filters'),
       ),
-      drawer: MainDrawer(
-        onSelectScreen: (identifier) {
-          Navigator.of(context).pop(); // close drawer
-          if (identifier == 'meals') {
-            // Navigator.of(context).push(
-              Navigator.of(context).pushReplacement(
-              // 直接取代，即無法使用返回鍵回來目前的頁面
-              MaterialPageRoute(
-                builder: (ctx) => const TabScreen(),
-              ),
-            );
-          }
-        },
-      ),
+      // drawer: MainDrawer(
+      //   onSelectScreen: (identifier) {
+      //     Navigator.of(context).pop(); // close drawer
+      //     if (identifier == 'meals') {
+      //       // Navigator.of(context).push(
+      //         Navigator.of(context).pushReplacement(
+      //         // 直接取代，即無法使用返回鍵回來目前的頁面
+      //         MaterialPageRoute(
+      //           builder: (ctx) => const TabScreen(),
+      //         ),
+      //       );
+      //     }
+      //   },
+      // ),
       body: Column(
         children: [
           SwitchListTile(
