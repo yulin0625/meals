@@ -43,7 +43,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
               });
             },
             title: Text(
-              'Gluuten-free',
+              'Gluten-free',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                   ),
